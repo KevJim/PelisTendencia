@@ -10,10 +10,10 @@ const Movies = async () => {
                 <img src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="${movie.title}">
                 <h2>${movie.title}</h2>
             </article>
-            <article class="Characers-card">
-                <h3>Fecha de Lanzamiento: <span>${movie.release_date}</span></h3>
-                <h3>Calificación:<span>${movie.vote_average}</span></h3>
-                <h3>Sipnosis: <span>${movie.overview}</span></h3>
+            <article class="Movies-card">
+                <h3>Fecha de Lanzamiento: </h3><span>${movie.release_date}</span>
+                <h3>Calificación: </h3><span>${movie.vote_average}</span>
+                <h3>Sipnosis: </h3><span>${movie.overview}</span>   
             </article>
         </div>
     `;

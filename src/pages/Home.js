@@ -1,4 +1,3 @@
-import getTopMoviesIds from '../utils/getTopMovies';
 import getData from '../utils/getData';
 
 const Home = async () => {

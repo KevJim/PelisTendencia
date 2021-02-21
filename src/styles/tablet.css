@@ -1,0 +1,27 @@
+.Movies {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Movie-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bolder;
+    width: 50%;
+    min-height: 400px;
+}
+.Movies-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    text-align: justify;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+}

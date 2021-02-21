@@ -3,7 +3,6 @@
     /* Colores */
     --pure-black: #000000;
     --purple: #6a097d;
-    --soft-purple: #c060a1;
     --cream: #f1d4d4;
 }
 * {
@@ -53,9 +52,20 @@ main {
     width: 100%;
     margin-top: 30px;
 }
-.Movie-item h2, a {
+.Movie-item h2 {
     color: azure;
     text-decoration: none;
+    background-color: var(--purple);
+    padding: 5px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Movie-item a {
+    color: azure;
+    text-decoration: none;
+    background-color: var(--purple);
 }
 .Movie-inner {
     width: 100%;
@@ -69,11 +79,14 @@ main {
     margin-top: 20px;
     font-size: 2rem;
     font-weight: bolder;
+    width: 100%;
 }
 .Movie-card h2 {
-    background-color: var(--soft-purple);
-    font-weight: 900;
+    background-color: var(--purple);
     padding: 5px;
+    width: 80%;
+    font-size: 2.2rem;
+    text-align: center;
 }
 .Movie-card img{
     width: 80%;
@@ -83,11 +96,75 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
     font-size: 1.6rem;
-    text-align: center;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 .Movies-card h3 {
     margin: 5px;
-    background-color: var(--soft-purple);
+    background-color: var(--purple);
+    padding: 5px;
+}
+.Movies-item {
+	text-decoration: none;
+	display: block;
+	animation-duration: 2s;
+	animation-name: fade;
+}
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.Main-loading {
+	border: 4px solid #f3f3f3;
+	border-top: 4px solid #3498db;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.Error404 h2 {
+    color: azure;
+    text-align: center;
+    margin-top: 30px;
+}
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--purple);
+}
+.social-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+}
+.social-media li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
 module.exports = {
 	entry: './src/index.js',
 	output: {
@@ -19,7 +20,15 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 				},
-			},
+			},{
+                test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 90000,
+                    }
+                }
+            },
 		],
 	},
 	plugins: [
@@ -33,6 +42,18 @@ module.exports = {
 				from: './src/styles/styles.css',
 				to: '',
 			},
+			{
+				from: './src/styles/tablet.css',
+				to: '',
+			},
+			{
+				from: './src/styles/desktop.css',
+				to: '',
+			},
+			{
+				from: './src/img',
+				to:'',
+			}
 		]),
 	],
 };
